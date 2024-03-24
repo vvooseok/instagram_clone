@@ -16,18 +16,23 @@ class App extends GetView<BottomNavController> {
   Widget build(BuildContext context) {
     // 취소키 컨트롤
     return PopScope(
-        canPop: false,
+        canPop: controller.canPopAction,
         child: Obx(() =>
             Scaffold(
               appBar: AppBar(),
               body: IndexedStack(
                 index: controller.pageIndex.value,
                 children: [
-                  Container(child: Center(child: Text('HOME')),),
-                  Container(child: Center(child: Text('SEARCH')),),
-                  Container(child: Center(child: Text('UPLOAD')),),
-                  Container(child: Center(child: Text('ACTIVITY')),),
-                  Container(child: Center(child: Text('MYPAGE')),),
+                  Container(child: Center(child: Text('HOME')),
+                  ),
+                  Container(child: Center(child: Text('SEARCH')),
+                  ),
+                  Container(child: Center(child: Text('UPLOAD')),
+                  ),
+                  Container(child: Center(child: Text('ACTIVITY')),
+                  ),
+                  Container(child: Center(child: Text('MYPAGE')),
+                  ),
                 ],
               ),
               bottomNavigationBar: BottomNavigationBar(
@@ -65,15 +70,14 @@ class App extends GetView<BottomNavController> {
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.grey
-                          )
+                          ),
                       ),
                       label: 'home'
                   ),
                 ],
               ),
-            )
-        )
-
+            ),
+        ),
     );
   }
 }
