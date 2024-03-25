@@ -1,13 +1,10 @@
 // import 'package:universal_html/html.dart';
 
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:instaclone/src/components/image_data.dart';
 import 'package:instaclone/src/controller/bottom_nav_controller.dart';
+import 'package:instaclone/src/pages/home.dart';
 
 class App extends GetView<BottomNavController> {
   const App({super.key});
@@ -16,22 +13,24 @@ class App extends GetView<BottomNavController> {
   Widget build(BuildContext context) {
     // 취소키 컨트롤
     return PopScope(
-        canPop: controller.canPopAction,
+
+        // canPop: controller.canPopAction(),
         child: Obx(() =>
             Scaffold(
               appBar: AppBar(),
               body: IndexedStack(
                 index: controller.pageIndex.value,
                 children: [
-                  Container(child: Center(child: Text('HOME')),
+                  const Home(),
+                  Container(child: const Center(child: Text('HOME')),
                   ),
-                  Container(child: Center(child: Text('SEARCH')),
+                  Container(child: const Center(child: Text('SEARCH')),
                   ),
-                  Container(child: Center(child: Text('UPLOAD')),
+                  Container(child: const Center(child: Text('UPLOAD')),
                   ),
-                  Container(child: Center(child: Text('ACTIVITY')),
+                  Container(child: const Center(child: Text('ACTIVITY')),
                   ),
-                  Container(child: Center(child: Text('MYPAGE')),
+                  Container(child: const Center(child: Text('MYPAGE')),
                   ),
                 ],
               ),
