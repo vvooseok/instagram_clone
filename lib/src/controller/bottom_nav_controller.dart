@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:instaclone/pages/upload.dart';
-import 'dart:async';
+// import 'dart:async';
 
 enum PageName{ HOME, SEARCH, UPLOAD, ACTIVITY, MYPAGE }
 

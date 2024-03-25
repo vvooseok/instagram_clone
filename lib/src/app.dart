@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:instaclone/pages/home.dart';
 import 'package:instaclone/src/components/image_data.dart';
 import 'package:instaclone/src/controller/bottom_nav_controller.dart';
-import 'package:instaclone/src/pages/home.dart';
+// import 'package:instaclone/src/pages/home.dart';
 
 class App extends GetView<BottomNavController> {
   const App({super.key});
@@ -13,7 +14,6 @@ class App extends GetView<BottomNavController> {
   Widget build(BuildContext context) {
     // 취소키 컨트롤
     return PopScope(
-
         // canPop: controller.canPopAction(),
         child: Obx(() =>
             Scaffold(
